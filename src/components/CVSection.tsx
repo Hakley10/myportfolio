@@ -8,24 +8,24 @@ export function CVSection() {
         <div className="flex flex-wrap items-end justify-between gap-6 mb-10">
           <div>
             <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-2">
-              [ curriculum_vitae ]
+              [ Heng_Hakley-CV ]
             </h2>
             <p className="text-3xl sm:text-4xl font-semibold tracking-tight">Resume</p>
           </div>
-          <a
-            href="/cv.pdf" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-xs font-bold uppercase tracking-widest rounded-md hover:opacity-90 transition-opacity"
-          >
-            <Download className="size-4" /> View & Download CV
-          </a>
+<a
+  href="/cv.pdf" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-xs font-bold uppercase tracking-widest rounded-md hover:opacity-90 transition-opacity"
+>
+  <Download className="size-4" /> View & Download CV
+</a>
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-muted-foreground border-y border-border py-4 mb-12">
           <span className="inline-flex items-center gap-2">
             <Mail className="size-3.5 text-primary" />
-            <span>hakleyheng@gmail.com</span>
+            <span>hakleyheng15@gmail.com</span>
           </span>
           <span className="inline-flex items-center gap-2">
             <MapPin className="size-3.5 text-primary" />
@@ -39,16 +39,21 @@ export function CVSection() {
 
         <SubHeading>// experience</SubHeading>
         <div className="space-y-10 mb-16">
-          {experience.map((e) => (
-            <div key={e.company} className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {experience.map((e, index) => (
+            <div key={index} className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
                 {e.year}
-                <div className="text-foreground/60 normal-case mt-1">{e.location}</div>
+
               </div>
               <div className="md:col-span-3">
                 <div className="flex flex-wrap items-baseline gap-x-3">
-                  <h3 className="text-xl font-semibold">{e.role}</h3>
-                  <span className="text-primary font-mono text-sm">@ {e.company}</span>
+                  <h3 className="text-xl font-semibold">{e.projects}</h3>
+                  {e.role && (
+                    <span className="text-muted-foreground font-normal">
+                      — {e.role}
+                    </span>
+                  )}
+
                 </div>
                 <ul className="mt-3 space-y-1.5 text-muted-foreground">
                   {e.bullets.map((b) => (

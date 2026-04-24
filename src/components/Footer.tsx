@@ -7,8 +7,8 @@ export function Footer() {
           <span className="uppercase tracking-widest">secure_channel: active</span>
         </div>
         <div className="flex gap-6">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-primary">GITHUB</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-primary">LINKEDIN</a>
+          <a href="https://github.com/Hakley10" target="_blank" rel="noreferrer" className="hover:text-primary">GITHUB</a>
+          <a href="https://www.linkedin.com/in/heng-hakley-677b9a3b8/" target="_blank" rel="noreferrer" className="hover:text-primary">LINKEDIN</a>
 
         </div>
       </div>
