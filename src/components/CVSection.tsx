@@ -13,11 +13,12 @@ export function CVSection() {
             <p className="text-3xl sm:text-4xl font-semibold tracking-tight">Resume</p>
           </div>
           <a
-            href="/cv.pdf"
-            download
+            href="/cv.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-xs font-bold uppercase tracking-widest rounded-md hover:opacity-90 transition-opacity"
           >
-            <Download className="size-4" /> Download PDF
+            <Download className="size-4" /> View & Download CV
           </a>
         </div>
 
